@@ -1,113 +1,153 @@
+"use client"
+import Header from "./Components/Header";
 import Image from "next/image";
-
+import FirstLook from "./Components/FirstLook";
+import ChooseCar from "./Components/ChooseCar";
+import Services from "./Components/Serivces";
+import Advantages from "./Components/Advantages";
+import ContactUs from "./Components/ContactUs";
+import Costumers from "./Components/Costumers";
+import Subscribe from "./Components/Subscribe";
+import { Button } from "./page_style";
+import { Bruno_Ace } from "next/font/google";
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+    <div>
+      <Header />
+      <FirstLook />
+      <div style={{ backgroundColor: '#fee7e7', width: '100%', height: '280px', marginBottom: '100px' }}>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
+      <div style={{ alignItems: 'center', justifyContent: 'center', display: 'flex', marginBottom: '120px' }}>
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          src="/images/logo.png"
+          alt="Map image"
+          width={100}
+          height={100}
+          sizes='cover'
+          style={{ width: '80%', alignSelf: 'center' }}
         />
       </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <ChooseCar />
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginLeft: '0px', marginBottom: '70px' }}>
+        <Button style={{ width: '8%' }}>See All</Button>
       </div>
-    </main>
+      <Services />
+      <div style={{ display: 'flex', margin: '0px auto', alignItems: 'center', justifyContent: 'center', width: '80%', flexDirection: 'column' }}>
+        <div style={{ display: 'flex', alignItems: "center", flexDirection: 'column', paddingTop: 30, zIndex: 99 }}>
+          <text style={{ color: '#fbb7b7', fontSize: '23px', marginBottom: '10px' }}>ADVANTAGES</text>
+          <text style={{ color: '#737373', fontSize: '55px', marginBottom: '10px' }}>Why Choose Us ?</text>
+          <text style={{ color: '#A6A6A6', fontSize: '17px', marginBottom: '55px' }}>We present many guarantees and advantages when you rent a car with us for your trip. Here are some of the advantages that you will get.</text>
+        </div>
+      </div>
+      <Advantages />
+      <ContactUs />
+      <div style={{ display: 'flex', margin: '0px auto', alignItems: 'center', justifyContent: 'center', width: '80%', flexDirection: 'column', marginBottom: '50px' }}>
+        <div style={{ display: 'flex', alignItems: "center", flexDirection: 'column' }}>
+          <text style={{ color: '#fbb7b7', fontSize: '23px', marginBottom: '10px' }}>OUR REVIEW</text>
+          <text style={{ color: '#737373', fontSize: '55px', marginBottom: '10px' }}>What They Say ?</text>
+          <text style={{ color: '#A6A6A6', fontSize: '17px', marginBottom: '55px' }}>Here are some comments from our customers, be one of them</text>
+        </div>
+      </div>
+      <Costumers />
+      <div style={{ display: 'flex', margin: '0px auto', width: '80%', justifyContent: 'center', alignItems: 'center', marginBottom: '50px' }}>
+        <Button style={{ marginLeft: '0px', width: '10%' }}>See All</Button>
+      </div>
+      <Subscribe />
+      <div style={{ display: 'flex',  margin: '0px auto', width: '80%', flexDirection: 'row', justifyContent: 'space-between' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', width:'50%', marginRight:'40px' }}>
+          <Image
+            src="/images/logo_header.png"
+            alt="Hero image"
+            width={100}
+            height={100}
+            sizes='cover'
+            style={{ marginBottom: '30px' }}
+          />
+          <text style={{ color: '#A6A6A6', marginBottom: '40px' }}>
+            We are a well-known car rental service that has many partners in each
+            region to connect with you to assist in your trip in meetings, events, holidays or long trips.
+          </text>
+          <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: '8%' }}>
+            <Image
+              src="/images/icon/linkedin.png"
+              alt="Map image"
+              width={27}
+              height={27}
+              sizes='cover'
+              style={{ marginRight: '35px' }}
+            />
+            <Image
+              src="/images/icon/twitter.png"
+              alt="Map image"
+              width={27}
+              height={27}
+              sizes='cover'
+              style={{ marginRight: '35px' }}
+            />
+            <Image
+              src="/images/icon/facebook.png"
+              alt="Map image"
+              width={27}
+              height={27}
+              sizes='cover'
+              style={{ marginRight: '35px' }}
+            />
+            <Image
+              src="/images/icon/instagram.png"
+              alt="Map image"
+              width={27}
+              height={27}
+              sizes='cover'
+              style={{ marginRight: '35px' }}
+            />
+          </div>
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'column', width:'40%' }}>
+          <text style={{ color: '#737373', fontSize: '25px' }}>Company</text>
+          <text style={{ color: '#A6A6A6', marginBottom: '10px' }}>
+            About Us
+          </text>
+          <text style={{ color: '#A6A6A6', marginBottom: '10px' }}>
+            Services
+          </text>
+          <text style={{ color: '#A6A6A6', marginBottom: '10px' }}>
+            Cars
+          </text>
+          <text style={{ color: '#A6A6A6', marginBottom: '10px' }}>
+            Our Partners
+          </text>
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'column', width:'40%' }}>
+          <text style={{ color: '#737373', fontSize: '25px' }}>Services</text>
+          <text style={{ color: '#A6A6A6', marginBottom: '10px' }}>
+            Instant Rent
+          </text>
+          <text style={{ color: '#A6A6A6', marginBottom: '10px' }}>
+            Private Driver
+          </text>
+          <text style={{ color: '#A6A6A6', marginBottom: '10px' }}>
+            Long Trip
+          </text>
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'column', width:'40%' }}>
+          <text style={{ color: '#737373', fontSize: '25px' }}>Support</text>
+          <text style={{ color: '#A6A6A6', marginBottom: '10px' }}>
+            Blog
+          </text>
+          <text style={{ color: '#A6A6A6', marginBottom: '10px' }}>
+            FAQ
+          </text>
+          <text style={{ color: '#A6A6A6', marginBottom: '10px' }}>
+            Call Center
+          </text>
+          <text style={{ color: '#A6A6A6', marginBottom: '10px' }}>
+            Partner With Us
+          </text>
+          <text style={{ color: '#A6A6A6', marginBottom: '10px' }}>
+            Terms & Condition
+          </text>
+        </div>
+      </div>
+    </div>
   );
 }
